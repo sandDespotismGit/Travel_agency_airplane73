@@ -7,13 +7,13 @@
     <div class="tstyle">
         <h2>Топ отелей</h2>
         <?php
-        require_once $_SERVER['DOCUMENT_ROOT'].'/accountBD.php';
+        require_once 'accountBD.php';
         ?>
     </div>
     <div class="sstyle">
         <h2>Интересные направления</h2>
         <?php
-        require_once $_SERVER['DOCUMENT_ROOT'].'/catalogBD.php';
+        require_once 'catalogBD.php';
         ?>
     </div>
 </div>

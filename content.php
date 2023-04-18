@@ -1,7 +1,7 @@
 <div>
     <h3>Горячие туры:</h3>
     <?php
-    require_once $_SERVER['DOCUMENT_ROOT'].'/accountBD.php'
+    require_once 'accountBD.php'
     ?>
 </div>
 <div>
@@ -10,7 +10,7 @@
 <div>
     <h4>
         <!-- <?php
-        require_once $_SERVER['DOCUMENT_ROOT'].'/accountBD.php'
+        require_once 'accountBD.php'
         ?> -->
     </h4>
     <ul>
@@ -23,7 +23,7 @@
 <div>
     <h4>
         <?php
-        require_once $_SERVER['DOCUMENT_ROOT'].'/ticketsBD.php'
+        require_once 'ticketsBD.php'
         ?>
     </h4>
     <ul>

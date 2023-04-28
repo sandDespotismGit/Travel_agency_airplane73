@@ -17,24 +17,51 @@
         require_once 'top.php';
         ?>
     </div>
-    <div class="page">
-        <div class="sidebar">
-            <?php
-            require_once 'sidebar.php';
-            ?>
+    <?php
+    if( $_COOKIE['IsAdmin'] == 1):
+        ?>
+        <div class="panel">
+            <form >
+                <button class="glow-on-hover">Добавить текст</button>
+            </form>
+            <form >
+                <button class="glow-on-hover">Проверить соединение</button>
+            </form>
+            <form >
+                <button class="glow-on-hover">Редактировать текст</button>
+            </form>
         </div>
-        <div>
+    <?php else:?>
+
+    <?php endif; ?>
+    <div class="page">
+        <div class="content">
             <?php
             require_once 'content.php';
             ?>
         </div>
     </div>
     <div>
-        <div class="carousel">
-            <div tabindex="0" class="carousel--item one"></div>
-            <div tabindex="0" class="carousel--item two"></div>
-            <div tabindex="0" class="carousel--item three"></div>
-        </div>
+        <?php
+        if(! isset($_COOKIE['Name'])):
+            ?>
+            <h2> Пройдите авторизацию для покупки билета</h2>
+        <?php else:?>
+            <p>Yo, <?=$_COOKIE['Name']?></p>
+            <a href="exit.php"> Exit</a>
+        <?php endif; ?>
+    </div>
+
+    <div class="panel">
+        <form action="Index.php">
+            <button class="glow-on-hover">Главная</button>
+        </form>
+        <form action="carousel.php">
+            <button class="glow-on-hover">Галерея</button>
+        </form>
+        <form action="accaunt.php">
+            <button class="glow-on-hover">Аккаунт</button>
+        </form>
     </div>
     <div class="footer" >
         <?php
